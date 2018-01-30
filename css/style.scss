@@ -1,0 +1,174 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #fdfcf6;
+$subColor: #bea300;
+$keyColor: #14c0c9;
+$fontColor: #4c4c4c;
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+.text {
+    padding: 20px;
+    margin: 0px;
+    text-align: justify;
+    
+  }
+
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Header
+------------------------------------------------------------*/
+
+header {
+
+  .profile-icon {;
+    margin: auto;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  .image {
+  background-image: url("../images/cellar.jpg");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+ 
+ @media (max-width: 768px){
+  .image {
+  background-image: url("../images/cellar.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+}
+  
+}
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section {
+  padding: 60px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  h2 {
+    @extend .abel;
+    font-size: 3.2rem;
+    background-color: $subColor;
+    @extend .uppercase;
+  }
+}
+
+// wine
+#wine {
+  background-color: $subColor;
+  .container {
+  @include display-flex;
+    justify-content: space-between;
+  }
+  h2 {
+    color: $baseColor;
+    margin-bottom: 60px;
+  }
+
+  .box {
+    @include flex(1);
+    margin: 0 10px;
+    padding: 0px;
+    background-color: $baseColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  }
+ 
+  h3 {
+    @extend .abel;
+    @extend .uppercase;
+    color: $baseColor;
+    background-color: red;
+    margin-right: 0px;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+  @media (max-width: 768px){
+  .container {
+    flex-direction: column;
+  }
+  .box {
+    margin: 10px;
+  }
+}
+}
+ #next {
+   background-color: $baseColor;
+   margin: 0px;
+  h2 {
+   color: red;
+   background-color:$baseColor;
+   font-size: 2rem;
+   font-weight: bold;
+    }
+  a {
+    background-color: red;
+  }
+  li a {
+    display: inline-block;
+    padding: 0.3em 1.5em;
+    text-decoration: none;
+    background: #668ad8;
+    color: #FFF;
+    border-radius: 4px;
+    font-size: 20px;
+}
+    a:hover, a:active {
+    display: inline-block;
+    padding: 0.3em 1.5em;
+    text-decoration: none;
+    background: red;
+    color: #FFF;
+    border-radius: 4px;
+    font-size: 20px;
+      }
+       }
